@@ -35,9 +35,12 @@
 }
 
 .main{
+    display: flex;
     grid-area: main;
     background-color: blanchedalmond;
     padding-left: 10px;
+    justify-content: start;
+    align-items: first baseline
 
 }
 
@@ -56,4 +59,8 @@
     "menu main"
     "footer footer";
     grid-template-columns: 15% 85%;
+}
+
+.card-prod{
+    border-bottom: 2px rgba(255, 255, 255, 0.47);
 }
