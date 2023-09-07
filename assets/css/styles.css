@@ -2,6 +2,8 @@
     font-family: 'Poppins', sans-serif;
     margin: 0px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -16,8 +18,9 @@
 }
 
 .menu{
-    display: grid;
-    grid-template-rows: repeat(10,1fr);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     grid-area: menu;
     background-color: rgb(0, 0, 0);
     color:blanchedalmond;
@@ -25,31 +28,15 @@
     gap: 20px;
  }
 
-.item{
-    padding: 10px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.47);
-}
-
 .a{
     color:blanchedalmond;
 }
 
-.main{
-    display: flex;
-    grid-area: main;
-    background-color: blanchedalmond;
+.item{
+    color:blanchedalmond;
+    font-size: 120%;
     padding-left: 10px;
-    justify-content: start;
-    align-items: first baseline
 
-}
-
-.footer{
-    display:flex;
-    grid-area: footer;
-    background-color: black;
-    color:blanchedalmond ;
-    justify-content: center;
 }
 
 .layout{
@@ -59,8 +46,68 @@
     "menu main"
     "footer footer";
     grid-template-columns: 15% 85%;
+    min-height: 100vh
+}
+
+.layout-main{
+    display: grid;
+    grid-template-areas:
+    "main main main";
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 5px;
+    padding-right: 20px;
+    gap: 0%;
+
 }
 
 .card-prod{
-    border-bottom: 2px rgba(255, 255, 255, 0.47);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+
+}
+
+.boton-prod{
+    background-color: #ffffff;
+    color: #0059ff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+
+}
+
+.imagen-prod{
+    display: flex;
+    justify-content: center; 
+}
+
+.imagen-prod img {   
+    max-width: 250px;
+    max-height: 250px;
+    margin-bottom: 0%;
+
+}
+
+.nombre-prod{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0%;
+    padding-top: 20px;
+}
+
+.precio-prod{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0%;
+}
+
+.footer{
+    display:flex;
+    grid-area: footer;
+    background-color: black;
+    color:blanchedalmond ;
+    justify-content: center;
+    align-items: center;
 }
